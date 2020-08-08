@@ -67,7 +67,7 @@ class MDP_LQR(object):
 
     @property
     def state(self):
-        return self.x
+        return np.array(self.x)
     
     @property
     def terminal_value(self):
