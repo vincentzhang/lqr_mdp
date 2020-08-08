@@ -9,8 +9,8 @@ It currently supports both discrete-time and continuous-time LQR with the follow
 # Dependency
 
 * numpy
-* scipy
-* json (optional, for saving and loading)
+* scipy (for the ARE solver)
+* json (for saving and loading)
 
 # Usage
 
