@@ -1,5 +1,5 @@
 import numpy as np
-from lqr import MDP_LQR_Disc
+from lqr_mdp import MDP_LQR_Disc
 
 # load the discrete-time LQR instance from file
 mdp = MDP_LQR_Disc(fn='env/mdp_disc_laplacian.json')
