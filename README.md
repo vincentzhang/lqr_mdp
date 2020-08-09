@@ -33,7 +33,7 @@ for _ in range(10):
     next_state, reward, done = mdp.step(action)
     print("Iter {}: Next state: {}, cost: {}, done: {}".format(mdp.iter, next_state, reward, done))
 
-# Print the Optimal Value Matrix P_optimal where V(x) = x'P_optimal x
+# Print the Optimal Value Matrix P_optimal where V*(x) = x'P_optimal x
 print("The optimal value matrix P_optimal: \n", mdp.P_optimal)
 ```
 
