@@ -216,7 +216,7 @@ class MDP_LQR_Disc(MDP_LQR):
         self.B = np.array(data["B"])
         self.S = np.array(data["S"])
         self.R = np.array(data["R"])
-        self.horizon = data["horizon"]
+        self.horizon = np.array(data["horizon"])
         self.sigma_w = data["sigma_w"]
         self.std_x = data["std_x"]
         self.x_thres = data["x_thres"]
@@ -427,7 +427,7 @@ class MDP_LQR_Cont(MDP_LQR):
         self.B = np.array(data["B"])
         self.S = np.array(data["S"])
         self.R = np.array(data["R"])
-        self.horizon = data["horizon"]
+        self.horizon = np.array(data["horizon"])
         self.sigma_w = data["sigma_w"]
         self.std_x = data["std_x"]
         self.x_thres = data["x_thres"]
