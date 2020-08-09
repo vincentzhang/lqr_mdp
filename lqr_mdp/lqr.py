@@ -122,7 +122,7 @@ class MDP_LQR(object):
         return self.x.T.dot(self.P).dot(self.x) + eta * np.trace(self.P)  # V(x) for policy K, positive cost
     
     def is_controllable(self):
-        """ check if the sytem is controllable """
+        """ check if the system is controllable """
         # Construct the W matrix
         # W = [B|AB|A^2B| ... |A^{k}B| ... |A^{n−1}B] where n is the dim of state
         W = np.copy(self.B)
