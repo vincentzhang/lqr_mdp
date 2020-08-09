@@ -1,6 +1,6 @@
-# lqr-mdp
+# lqr_mdp
 
-lqr-mdp is a simple MDP library for Linear Quadratic Regulator (LQR) problems. It provides an openai-gym like interface.
+lqr_mdp is a simple MDP library for Linear Quadratic Regulator (LQR) problems. It provides an openai-gym like interface.
 
 It currently supports both discrete-time and continuous-time LQR with the following cost setup:
 * infinite-horizon discounted cost with or without process noise
@@ -17,7 +17,7 @@ It currently supports both discrete-time and continuous-time LQR with the follow
 ```python
 # import modules
 import numpy as np
-from lqr import MDP_LQR_Disc
+from lqr_mdp import MDP_LQR_Disc
 
 # Load an MDP
 mdp = MDP_LQR_Disc(fn='env/mdp_disc_laplacian.json')
