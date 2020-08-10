@@ -342,7 +342,7 @@ class MDP_LQR_Disc(MDP_LQR):
         # two options: zero terminal cost or non-zero terminal cost
         # the terminal state value is discounted more than the immediate reward
         if self.done:
-            self.terminal_cost = 0 #self.x.T.dot(self.S).dot(self.x)
+            self.terminal_cost = self.x.T.dot(self.S).dot(self.x)
             try:
                 discounted_reward = self.gamma ** self.iter * self.terminal_cost # sum of discounted reward
             except FloatingPointError:
