@@ -1,0 +1,16 @@
+{
+    "name": "NPG",
+    "dim_x": 1,
+    "dim_u": 1,
+    "A": 0.7,
+    "B": 1,
+    "S": 1,
+    "R": 0,
+    "horizon": Infinity,
+    "sigma_w": 1,
+    "std_x": 0,
+    "x_thres": 0.0001,
+    "max_iter": 100000.0,
+    "max_reward": 100000.0,
+    "gamma": 1
+}

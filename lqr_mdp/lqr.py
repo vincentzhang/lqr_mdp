@@ -118,9 +118,20 @@ class MDP_LQR(object):
 
     def value(self):
         """ return the estimated state value """
-        eta = self.gamma / (1-self.gamma) * (self.sigma_w**2)
+        if self.gamma < 1.0:
+            eta = self.gamma / (1-self.gamma) * (self.sigma_w**2)
+        else:
+            eta = 1.0
         return self.x.T.dot(self.P).dot(self.x) + eta * np.trace(self.P)  # V(x) for policy K, positive cost
     
+    def value_optimal(self):
+        """ return the estimated state value for the optimal policy """
+        if self.gamma < 1.0:
+            eta = self.gamma / (1-self.gamma) * (self.sigma_w**2)
+        else:
+            eta = 1.0
+        return self.x.T.dot(self.P_optimal).dot(self.x) + eta * np.trace(self.P_optimal)  # V(x) for policy K, positive cost
+
     def is_controllable(self):
         """ check if the system is controllable """
         # Construct the W matrix
